@@ -1,0 +1,32 @@
+- Piazza Recommended functions left within "Functions" class
+
+- All methods and variables within Functions class remain static as Functions is never instantiated
+
+- Classes "createBlacksmith(), createObstacle(), and createVein() all left within functions class as they are only
+called by functions recommended to be left in the functions class and retain no parameters that reference other classes
+
+- scheduleActions() within the Entity class as it determines its behavior based upon an Entity's kind
+
+- Other createXXXX() methods moved to Entity class as the scheduleActions and the only methods that call them
+are methods within the Entity class. 
+	- createMinerNotFull() and createOre() left as static as they are called by methods left within the Functions
+class
+
+- executeActivityAction() & executeAction() moved to Action class as it decides its behavior based upon an Action's entity's "kind"
+
+- Other executeXXXX() methods moved to Entity class as they heavily reference Entity's instance variables directly and often
+make conditional statements relating to Entity's "kind"
+
+- ORE_KEY within entities class remains public and static as it is referenced by variables within the Functions class
+and Entities class
+
+- addEntity() within WorldModel class as it directly edits the .entities instance variable of WorldModel
+
+- tryAddEntity() within Entity class as it references instance variable of Entity
+
+- removePendingEvent() within the EventScheduler class as it references instance variables of EventScheduler
+
+- moveEntity() within Entity class as it directly changes one of Entity's instance variables and acts upon an entity
+
+
+- 
